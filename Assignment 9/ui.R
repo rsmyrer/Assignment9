@@ -1,25 +1,45 @@
 #ui
 
+dashboardPage(
+  dashboardHeader(
+  title = "Iris Data"
+  ),
 
-# Define UI for application that draws a histogram
-fluidPage(
-  
-  # Application title
-  titlePanel("Old Faithful Geyser Data"),
-  
-  # Sidebar with a slider input for number of bins 
-  sidebarLayout(
-    sidebarPanel(
-      sliderInput("bins",
-                  "Number of bins:",
-                  min = 1,
-                  max = 50,
-                  value = 30)
+
+#Sepal Length
+
+  dashboardSidebar(
+    sliderInput(
+      "SLength",
+      "Sepal Length:",
+      min = 0, max = 50, value = 1
     ),
-    
-    # Show a plot of the generated distribution
-    mainPanel(
-      plotOutput("distPlot")
+
+#Sepal Width
+    sliderInput(
+      "SWidth",
+      "Sepal Width:",
+      min = 0, max = 50, value = 1
+    ),
+
+#Petal Legth
+    sliderInput(
+          "Petal Length",
+          "Petal Length:",
+          min = 0, max = 50, value = 1
+    ), 
+  
+#Petal Width
+    sliderInput(
+      "Petal Width",
+      "Petal Width:",
+      min = 0, max = 50, value = 1
     )
+
+  ),
+  dashboardBody(
+    fluidRow()
   )
 )
+
+
