@@ -28,7 +28,7 @@ dashboardPage(
 
 #Petal Legth
     sliderInput(
-          "Petal Length",
+          "PLength",
           "Petal Length:",
           min = min(iris$Petal.Length),
           max = max(iris$Petal.Length),
@@ -37,7 +37,7 @@ dashboardPage(
   
 #Petal Width
     sliderInput(
-      "Petal Width",
+      "PWidth",
       "Petal Width:",
       min = min(iris$Petal.Width),
       max = max(iris$Petal.Width),
