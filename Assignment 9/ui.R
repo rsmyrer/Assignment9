@@ -45,9 +45,20 @@ dashboardPage(
     )
 
   ),
+
   dashboardBody(
-    fluidRow()
+    fluidRow(
+      box(plotOutput("scatter"), width = 10),
+      box(DT::dataTableOutput('prediction'), width = 2)
+    ),
+    fluidRow(
+      box(plotOutput("sLengthDensity"), width = 6),
+      box(plotOutput("sWidthDensity"), width = 6)
+    ),
+    fluidRow(
+      box(plotOutput("pLengthDensity"), width = 6),
+      box(plotOutput("pWidthDensity"), width = 6)
+    )
   )
 )
-
 
